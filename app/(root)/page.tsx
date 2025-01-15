@@ -1,11 +1,16 @@
 import BookList from '@/components/BookList';
-import BooksOverview from '@/components/BooksOverview';
+import BookOverview from '@/components/BookOverview';
+import { sampleBooks } from '@/constants/sample-books';
 
 const Home = () => {
   return (
     <div>
-      <BooksOverview />
-      <BookList />
+      <BookOverview {...sampleBooks[0]} />
+      {/* <BookList
+        title='Popular Books'
+        books={sampleBooks}
+        containerClassName='mt-20'
+      /> */}
     </div>
   );
 };

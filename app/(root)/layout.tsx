@@ -2,10 +2,12 @@ import Header from '@/components/Header';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      <Header />
-      {children}
-    </div>
+    <main className='root-container'>
+      <div className='mx-auto max-w-7xl'>
+        <Header />
+        <div className='pt-20 pb-20'>{children}</div>
+      </div>
+    </main>
   );
 };
 
