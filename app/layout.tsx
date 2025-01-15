@@ -27,16 +27,15 @@ export const metadata: Metadata = {
   description: 'A borrowing and lending platform for books',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en'>
-      <body className={`${ibmPlexSans} ${bebasNeue.variable} antialiased`}>
+      <body
+        className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
   );
-}
+};
+export default RootLayout;
